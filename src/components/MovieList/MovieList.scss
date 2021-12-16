@@ -1,29 +1,42 @@
-.movie-list {
-  width: 80%;
-  margin: 0 auto !important;
-  margin-top: 50px !important;
-  border-color: #001529 !important;
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 20px;
 
-  .ant-list-header {
-    background-color: #001529 !important;
-    h2 {
-      text-align: center;
-      margin: 0;
-      color: #fff;
-    }
-  }
-  .ant-list-items {
-    background-color: #fff;
-    height: 500px;
-    overflow: scroll;
-  }
+  .movie-list {
+    min-width: 600px;
+    margin: 0 auto !important;
+    margin-top: 50px !important;
+    border-color: #000 !important;
 
-  &__movie {
-    .ant-list-item-meta {
-      align-items: center;
+    .ant-list-header {
+      background-color: #000 !important;
+      h2 {
+        text-align: center;
+        margin: 0;
+        color: #fff;
+      }
     }
-    .ant-list-item-meta-title {
-      margin: 0;
+
+    .ant-list-items {
+      background-color: #fff;
+      height: 570px;
+      overflow: scroll;
+      overflow-x: hidden;
+    }
+
+    &__movie {
+      .ant-list-item-meta {
+        align-items: center;
+      }
+      .ant-list-item-meta-title {
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      min-width: 370px;
     }
   }
 }

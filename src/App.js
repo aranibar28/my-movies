@@ -2,17 +2,17 @@ import React from "react";
 import { Layout } from "antd";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Error404, Home, Movie, NewMovies, Popular, Search } from "./pages";
-import { MenuTop, Footer } from "./components";
+import { MenuTop } from "./components";
 
 export default function App() {
   const { Header, Content } = Layout;
   return (
     <Router>
-      <Layout>
+      <Layout className="layout">
         <Header style={{ zIndex: 1 }}>
           <MenuTop />
         </Header>
-        <Content>
+        <Content className="content">
           <Routes>
             <Route path="/" exact={true} element={<Home />} />
             <Route path="/new-movies" exact={true} element={<NewMovies />} />
@@ -22,7 +22,6 @@ export default function App() {
             <Route path="*" element={<Error404 />} />
           </Routes>
         </Content>
-        <Footer />
       </Layout>
     </Router>
   );

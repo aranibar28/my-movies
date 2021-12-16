@@ -34,11 +34,11 @@ function RenderMovie(props) {
       style={{ backgroundImage: `url('${backdropPath}')` }}
     >
       <div className="movie__dark" />
-      <Row>
-        <Col span={8} offset={3} className="movie__poster">
+      <Row className="movie__container">
+        <Col className="movie__container-poster">
           <PosterMovie image={poster_path} />
         </Col>
-        <Col span={10} className="movie__info">
+        <Col className="movie__container-info">
           <MovieInfo movieInfo={props.movieInfo} />
         </Col>
       </Row>
@@ -86,14 +86,14 @@ function MovieInfo(props) {
 
   return (
     <>
-      <div className="movie__info-header">
+      <div>
         <h1>
           {title}
           <span>{moment(release_date, "YYYY-MM-DD").format("YYYY")}</span>
         </h1>
         {renderVideo()}
       </div>
-      <div className="movie__info-content">
+      <div>
         <h3>General</h3>
         <p>{overview}</p>
         <h3>Géneros</h3>

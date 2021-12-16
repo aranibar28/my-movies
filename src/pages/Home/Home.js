@@ -1,7 +1,6 @@
 import React from "react";
 import { useFetch } from "../../hooks/useFetch";
-import { SliderMovies } from "../../components/SliderMovies";
-import { MovieList } from "../../components/MovieList";
+import { SliderMovies, MovieList, Footer } from "../../components";
 import { URL_API, TOKEN } from "../../utils/constant";
 import { Row, Col } from "antd";
 
@@ -21,17 +20,18 @@ export function Home() {
   return (
     <>
       <SliderMovies movies={newMovies} />
-      <Row>
-        <Col span={12}>
+      <Row className="movie-container">
+        <Col>
           <MovieList title="Películas Populares" movies={popularwMovies} />
         </Col>
-        <Col span={12}>
+        <Col>
           <MovieList
             title="Top 20 Mejores Películas del momento"
             movies={topRatedwMovies}
           />
         </Col>
       </Row>
+      <Footer />
     </>
   );
 }
