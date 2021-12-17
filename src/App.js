@@ -15,6 +15,7 @@ export default function App() {
         <Content className="content">
           <Routes>
             <Route path="/" exact={true} element={<Home />} />
+            <Route path="/my-movies" exact={true} element={<Home />} />
             <Route path="/new-movies" exact={true} element={<NewMovies />} />
             <Route path="/popular" exact={true} element={<Popular />} />
             <Route path="/search" exact={true} element={<Search />} />

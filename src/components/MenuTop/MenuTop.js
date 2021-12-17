@@ -13,7 +13,7 @@ export function MenuTop() {
         <div className="menu-icon">X</div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/my-movies">Home</Link>
           </li>
           <li>
             <Link to="/new-movies">Lanzamientos</Link>
